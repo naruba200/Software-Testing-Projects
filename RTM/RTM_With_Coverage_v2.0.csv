@@ -1,0 +1,46 @@
+Req_ID,Requirement_Description,Module,TC_ID,Test_Case_Name,Status,Coverage_Type,Notes,Priority
+R1,Đăng ký email hợp lệ,Authentication,TC_AUTH_REG_001,Đăng ký thành công với email hợp lệ,PASS,Positive,Email verification cần kiểm thử thêm,High
+R1,Đăng ký email hợp lệ,Authentication,TC_AUTH_REG_005,Không đăng ký khi email trống,PASS,Negative,Validation on email field,High
+R2,Không đăng ký khi email sai định dạng,Authentication,TC_AUTH_REG_002,Không đăng ký khi email sai định dạng,PASS,Negative,Test multiple invalid email formats,High
+R3,Mật khẩu tối thiểu 8 ký tự,Authentication,TC_AUTH_REG_003,Không đăng ký khi mật khẩu dưới 8 ký tự,PASS,Boundary,Test password 1-7 characters,High
+R3,Mật khẩu tối thiểu 8 ký tự,Authentication,TC_AUTH_REG_006,Không đăng ký khi mật khẩu trống,PASS,Negative,Empty password field,High
+R3,Mật khẩu tối thiểu 8 ký tự,Authentication,TC_AUTH_REG_007,Đăng ký với mật khẩu ký tự đặc biệt,PASS,Validation,Security test - special chars,Medium
+R4,Email đã tồn tại không được đăng ký,Authentication,TC_AUTH_REG_004,Không đăng ký khi email đã tồn tại,PASS,Negative,Duplicate email validation,High
+R5,Đăng nhập thành công với thông tin hợp lệ,Authentication,TC_AUTH_LOGIN_001,Đăng nhập thành công,PASS,Positive,Session created correctly,High
+R5,Đăng nhập thành công với thông tin hợp lệ,Authentication,TC_AUTH_LOGIN_005,Không đăng nhập khi email trống,PASS,Negative,Empty email field validation,High
+R6,Đăng nhập thất bại khi sai mật khẩu,Authentication,TC_AUTH_LOGIN_002,Đăng nhập thất bại khi sai mật khẩu,PASS,Negative,Log failed attempts,High
+R6,Đăng nhập thất bại khi sai mật khẩu,Authentication,TC_AUTH_LOGIN_003,Đăng nhập thất bại khi email không tồn tại,PASS,Negative,Non-existent email,High
+R7,Chống SQL Injection trong đăng nhập,Authentication,TC_AUTH_LOGIN_004,Đánh giá khả năng chống SQL Injection,PASS,Security,SQL injection prevention check,Critical
+R8,Quên mật khẩu gửi email,Authentication,TC_AUTH_FP_001,Gửi email đặt lại mật khẩu thành công,PASS,Positive,Email must have valid token,High
+R8,Quên mật khẩu gửi email,Authentication,TC_AUTH_FP_002,Không gửi với email không hợp lệ,PASS,Negative,Invalid email format,Medium
+R9,Session timeout sau 30 phút,Authentication,TC_AUTH_SESSION_001,Session hết hạn sau 30 phút,PASS,Validation,Security - session management,High
+R10,Tìm kiếm sản phẩm,Product & Cart,TC_PROD_SEARCH_001,Tìm kiếm hiển thị đúng kết quả,PASS,Positive,Test case-sensitive search,High
+R10,Tìm kiếm sản phẩm,Product & Cart,TC_PROD_SEARCH_002,Tìm kiếm không trả về kết quả,PASS,Negative,When keyword not found,Medium
+R10,Tìm kiếm sản phẩm,Product & Cart,TC_PROD_SEARCH_003,Tìm kiếm với ký tự đặc biệt,PASS,Negative,Special characters handling,Medium
+R10,Tìm kiếm sản phẩm,Product & Cart,TC_PROD_SEARCH_004,Tìm kiếm với tập dữ liệu lớn,PASS,Boundary,Performance with 10000+ products,Medium
+R11,Lọc theo giá/danh mục,Product & Cart,TC_PROD_FILTER_001,Lọc theo giá hoạt động đúng,PASS,Positive,Multiple price ranges test,High
+R11,Lọc theo giá/danh mục,Product & Cart,TC_PROD_FILTER_002,Lọc theo danh mục hoạt động đúng,PASS,Positive,Category filtering,High
+R11,Lọc theo giá/danh mục,Product & Cart,TC_PROD_FILTER_003,Lọc theo nhiều tiêu chí,PASS,Validation,Combined filters test,Medium
+R11,Lọc theo giá/danh mục,Product & Cart,TC_PROD_FILTER_004,Lọc với giá trị không hợp lệ,PASS,Negative,Invalid filter boundaries,Medium
+R12,Xem chi tiết sản phẩm,Product & Cart,TC_PROD_DETAIL_001,Hiển thị thông tin sản phẩm,PASS,Positive,Images, description, ratings,High
+R12,Xem chi tiết sản phẩm,Product & Cart,TC_PROD_DETAIL_002,Hiển thị hình ảnh sản phẩm,PASS,Positive,Image zoom and fullscreen,High
+R12,Xem chi tiết sản phẩm,Product & Cart,TC_PROD_DETAIL_003,Hiển thị trạng thái tồn kho,PASS,Boundary,Stock status display,High
+R13,Thêm sản phẩm vào giỏ,Product & Cart,TC_CART_ADD_001,Thêm sản phẩm vào giỏ thành công,PASS,Positive,Multiple products added,High
+R13,Thêm sản phẩm vào giỏ,Product & Cart,TC_CART_ADD_002,Không thêm sản phẩm hết hàng,PASS,Negative,Out-of-stock validation,High
+R13,Thêm sản phẩm vào giỏ,Product & Cart,TC_CART_ADD_003,Không thêm số lượng âm,PASS,Negative,Negative quantity validation,Medium
+R14,Cập nhật số lượng trong giỏ,Product & Cart,TC_CART_UPDATE_001,Cập nhật số lượng sản phẩm,PASS,Positive,Increase/decrease quantity,High
+R14,Cập nhật số lượng trong giỏ,Product & Cart,TC_CART_UPDATE_002,Cập nhật số lượng về 0 xoá sản phẩm,PASS,Boundary,Zero quantity removal,Medium
+R15,Xoá sản phẩm khỏi giỏ,Product & Cart,TC_CART_DELETE_001,Xoá sản phẩm khỏi giỏ thành công,PASS,Positive,Cart total updated,High
+R15,Xoá sản phẩm khỏi giỏ,Product & Cart,TC_CART_DELETE_002,Xoá tất cả sản phẩm khỏi giỏ,PASS,Boundary,Empty cart handling,Medium
+R16,Lưu trữ giỏ hàng,Product & Cart,TC_CART_PERSIST_001,Giỏ hàng được lưu sau khi đăng xuất,PASS,Validation,Cart data persistence,Medium
+R17,Tính toán tổng giỏ chính xác,Product & Cart,TC_CART_TOTAL_001,Tính tổng giỏ hàng chính xác,PASS,Validation,Calculation accuracy,Critical
+R18,Thanh toán bắt buộc nhập địa chỉ,Checkout,TC_CHK_ADDRESS_001,Thanh toán bắt buộc nhập địa chỉ,PASS,Negative,Address field validation,High
+R18,Thanh toán bắt buộc nhập địa chỉ,Checkout,TC_CHK_ADDRESS_002,Nhập địa chỉ giao hàng thành công,PASS,Positive,Address saved to profile,High
+R18,Thanh toán bắt buộc nhập địa chỉ,Checkout,TC_CHK_ADDRESS_003,Kiểm tra định dạng địa chỉ,PASS,Validation,Address format validation,Medium
+R19,Chọn phương thức thanh toán,Checkout,TC_CHK_PAYMENT_001,Chọn thanh toán COD,PASS,Positive,Cash on delivery method,High
+R19,Chọn phương thức thanh toán,Checkout,TC_CHK_PAYMENT_002,Chọn thanh toán Visa,PASS,Positive,Visa payment simulation,High
+R20,Đặt hàng thành công,Checkout,TC_CHK_ORDER_001,Đặt hàng thành công,PASS,Positive,Order ID generated + email sent,Critical
+R20,Đặt hàng thành công,Checkout,TC_CHK_ORDER_002,Đặt hàng thất bại khi thiếu thông tin,PASS,Negative,Error handling,High
+R21,Lưu lịch sử đơn hàng,Checkout,TC_CHK_HISTORY_001,Xem lịch sử đơn hàng thành công,PASS,Positive,Order list display,High
+R21,Lưu lịch sử đơn hàng,Checkout,TC_CHK_HISTORY_002,Xem chi tiết đơn hàng,PASS,Positive,Order detail display,High
+R22,Áp dụng mã khuyến mãi,Checkout,TC_CHK_DISCOUNT_001,Áp dụng mã khuyến mãi hợp lệ,PASS,Validation,Discount calculation,Medium
