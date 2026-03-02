@@ -1,9 +1,0 @@
-Bug_ID,Title,Module,Feature,Severity,Priority,Status,Reported_By,Reported_Date,Assigned_To,Root_Cause,Resolution,Fixed_Date,Verification_Status,Build_Version
-BUG_2026_001,Đăng nhập không hoạt động với ký tự đặc biệt trong mật khẩu,Authentication,Login,HIGH,P1,Resolved,QA Engineer 1,05/03/2026,Dev 1,Password encoding issue,Escape special characters in form,06/03/2026,VERIFIED,v1.0.1
-BUG_2026_002,Tìm kiếm sản phẩm chậm khi có dữ liệu lớn,Product & Cart,Search,MEDIUM,P2,In_Progress,QA Engineer 2,06/03/2026,Dev 2,Missing DB index,Add database index,07/03/2026,PENDING,v1.0.1
-BUG_2026_003,Tổng giá trong giỏ hàng tính sai khi áp dụng discount,Product & Cart,Cart,CRITICAL,P0,Resolved,QA Engineer 3,06/03/2026,Dev 1,Wrong discount formula,Fix calculation logic (line 245),06/03/2026,VERIFIED,v1.0.1
-BUG_2026_004,Visa payment timeout occasionally,Checkout,Payment,HIGH,P1,In_Progress,QA Engineer 1,07/03/2026,Dev 3,Network timeout threshold,Increase timeout + retry logic,08/03/2026,IN_TEST,v1.0.1
-BUG_2026_005,Đơn hàng lưu sai khi CPU cao,Checkout,Order,MEDIUM,P2,Resolved,QA Engineer 2,07/03/2026,Dev 2,Race condition in DB,Add transaction lock,08/03/2026,VERIFIED,v1.0.1
-BUG_2026_006,Email xác nhận không gửi khi có ký tự đặc biệt trong tên,Authentication,Registration,MEDIUM,P2,Resolved,QA Engineer 3,08/03/2026,Dev 1,HTML encoding issue,Sanitize email content,08/03/2026,VERIFIED,v1.0.1
-BUG_2026_007,Lọc sản phẩm không hoạt động khi chọn 2+ danh mục,Product & Cart,Filter,MEDIUM,P2,Resolved,QA Engineer 1,08/03/2026,Dev 2,AND logic instead of OR,Change filter logic,09/03/2026,VERIFIED,v1.0.1
-BUG_2026_008,Trang chi tiết sản phẩm tải chậm (>5 giây),Product & Cart,Detail,LOW,P3,Resolved,QA Engineer 2,09/03/2026,Dev 3,No image optimization,Optimize images + caching,10/03/2026,VERIFIED,v1.0.1

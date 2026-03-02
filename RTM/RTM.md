@@ -221,5 +221,3 @@ Ma trận truy vết yêu cầu (RTM) v2.0 cải tiến:
 | 2.0 | 10/03/2026 | Enhanced RTM with 22 Requirements, 45 Test Cases, 100% Coverage |
 
 ---
-
-**END OF RTM v2.0**
